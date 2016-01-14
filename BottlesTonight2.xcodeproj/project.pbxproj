@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		476C0EDA1C474FEC0025535C /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0ED91C474FEC0025535C /* Club.m */; };
+		476C0EDD1C4750A10025535C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0EDC1C4750A10025535C /* User.m */; };
 		47BBB4791C473AEC00738EC4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB4781C473AEC00738EC4 /* HomeViewController.m */; };
 		47BBB47C1C473AF300738EC4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB47B1C473AF300738EC4 /* DetailViewController.m */; };
+		47BBB47F1C473F9500738EC4 /* ClubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB47E1C473F9500738EC4 /* ClubTableViewCell.m */; };
 		47E8CA741C4738EC00E92DEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA731C4738EC00E92DEA /* main.m */; };
 		47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA761C4738EC00E92DEA /* AppDelegate.m */; };
 		47E8CA7D1C4738EC00E92DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8CA7B1C4738EC00E92DEA /* Main.storyboard */; };
@@ -17,6 +20,7 @@
 		47E8CA851C4738EC00E92DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8CA831C4738EC00E92DEA /* LaunchScreen.storyboard */; };
 		47E8CA901C4738EC00E92DEA /* BottlesTonight2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA8F1C4738EC00E92DEA /* BottlesTonight2Tests.m */; };
 		47E8CA9B1C4738EC00E92DEA /* BottlesTonight2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA9A1C4738EC00E92DEA /* BottlesTonight2UITests.m */; };
+		D7CCD21E830A8FEF56ABFB99 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAA8A05E97823D61E41F513 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		476C0ED81C474FEC0025535C /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
+		476C0ED91C474FEC0025535C /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
+		476C0EDB1C4750A10025535C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		476C0EDC1C4750A10025535C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		47BBB4771C473AEC00738EC4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		47BBB4781C473AEC00738EC4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		47BBB47A1C473AF300738EC4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		47BBB47B1C473AF300738EC4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		47BBB47D1C473F9500738EC4 /* ClubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubTableViewCell.h; sourceTree = "<group>"; };
+		47BBB47E1C473F9500738EC4 /* ClubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubTableViewCell.m; sourceTree = "<group>"; };
 		47E8CA6F1C4738EB00E92DEA /* BottlesTonight2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottlesTonight2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E8CA731C4738EC00E92DEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		47E8CA751C4738EC00E92DEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +66,9 @@
 		47E8CA961C4738EC00E92DEA /* BottlesTonight2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottlesTonight2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E8CA9A1C4738EC00E92DEA /* BottlesTonight2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottlesTonight2UITests.m; sourceTree = "<group>"; };
 		47E8CA9C1C4738EC00E92DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB14FB004F253E2D8FC64221 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CB845FF6766E13C10A2A0A73 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DEAA8A05E97823D61E41F513 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CCD21E830A8FEF56ABFB99 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142B3BBDEA74852B77FD5376 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB845FF6766E13C10A2A0A73 /* Pods.debug.xcconfig */,
+				BB14FB004F253E2D8FC64221 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		47BBB4741C473A9100738EC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +113,8 @@
 				47BBB4781C473AEC00738EC4 /* HomeViewController.m */,
 				47BBB47A1C473AF300738EC4 /* DetailViewController.h */,
 				47BBB47B1C473AF300738EC4 /* DetailViewController.m */,
+				47BBB47D1C473F9500738EC4 /* ClubTableViewCell.h */,
+				47BBB47E1C473F9500738EC4 /* ClubTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -106,6 +131,10 @@
 		47BBB4761C473A9700738EC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				476C0ED81C474FEC0025535C /* Club.h */,
+				476C0ED91C474FEC0025535C /* Club.m */,
+				476C0EDB1C4750A10025535C /* User.h */,
+				476C0EDC1C4750A10025535C /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,6 +146,8 @@
 				47E8CA8E1C4738EC00E92DEA /* BottlesTonight2Tests */,
 				47E8CA991C4738EC00E92DEA /* BottlesTonight2UITests */,
 				47E8CA701C4738EB00E92DEA /* Products */,
+				142B3BBDEA74852B77FD5376 /* Pods */,
+				557D881957413184E435DFAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +203,14 @@
 			path = BottlesTonight2UITests;
 			sourceTree = "<group>";
 		};
+		557D881957413184E435DFAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAA8A05E97823D61E41F513 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47E8CA9F1C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2" */;
 			buildPhases = (
+				682D3FED1538047913302C43 /* Check Pods Manifest.lock */,
 				47E8CA6B1C4738EB00E92DEA /* Sources */,
 				47E8CA6C1C4738EB00E92DEA /* Frameworks */,
 				47E8CA6D1C4738EB00E92DEA /* Resources */,
+				FCE0FA163AFE95B959D5403D /* Embed Pods Frameworks */,
+				E1293B9A20247BE8F99C06CF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,16 +339,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		682D3FED1538047913302C43 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E1293B9A20247BE8F99C06CF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCE0FA163AFE95B959D5403D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		47E8CA6B1C4738EB00E92DEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				47BBB47C1C473AF300738EC4 /* DetailViewController.m in Sources */,
+				476C0EDD1C4750A10025535C /* User.m in Sources */,
 				47E8CA801C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld in Sources */,
+				476C0EDA1C474FEC0025535C /* Club.m in Sources */,
 				47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */,
 				47E8CA741C4738EC00E92DEA /* main.m in Sources */,
 				47BBB4791C473AEC00738EC4 /* HomeViewController.m in Sources */,
+				47BBB47F1C473F9500738EC4 /* ClubTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +536,7 @@
 		};
 		47E8CAA01C4738EC00E92DEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB845FF6766E13C10A2A0A73 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BottlesTonight2/Info.plist;
@@ -454,6 +548,7 @@
 		};
 		47E8CAA11C4738EC00E92DEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB14FB004F253E2D8FC64221 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BottlesTonight2/Info.plist;

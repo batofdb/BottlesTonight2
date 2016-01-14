@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -17,18 +18,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="273" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tg6-b7-7ig">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tg6-b7-7ig">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="273" id="OtU-5v-MWA">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="273"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="240" id="OtU-5v-MWA" customClass="ClubTableViewCell">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OtU-5v-MWA" id="c4W-N8-9zL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="272"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-eI-RxD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="239"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Detail - City - 1.0 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44H-2z-NZL">
+                                                    <rect key="frame" x="13" y="216" width="374" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="374" id="8h8-vT-8Gx"/>
+                                                        <constraint firstAttribute="height" constant="19" id="CJl-Yd-Eke"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcR-3k-aGZ">
+                                                    <rect key="frame" x="13" y="185" width="549" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="549" id="KBd-ox-oUZ"/>
+                                                        <constraint firstAttribute="height" constant="30" id="p3F-6a-oly"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="44H-2z-NZL" firstAttribute="leading" secondItem="c4W-N8-9zL" secondAttribute="leadingMargin" constant="5" id="03U-aj-nMT"/>
+                                                <constraint firstItem="LcR-3k-aGZ" firstAttribute="leading" secondItem="44H-2z-NZL" secondAttribute="leading" id="062-s0-fyn"/>
+                                                <constraint firstAttribute="bottom" secondItem="h2z-eI-RxD" secondAttribute="bottom" id="3Vw-Kd-7My"/>
+                                                <constraint firstItem="h2z-eI-RxD" firstAttribute="top" secondItem="c4W-N8-9zL" secondAttribute="top" id="82G-iR-BRS"/>
+                                                <constraint firstItem="h2z-eI-RxD" firstAttribute="leading" secondItem="44H-2z-NZL" secondAttribute="trailing" constant="-396" id="IEe-zz-oKT"/>
+                                                <constraint firstItem="44H-2z-NZL" firstAttribute="top" secondItem="LcR-3k-aGZ" secondAttribute="bottom" constant="1" id="IFl-8z-HvK"/>
+                                                <constraint firstItem="h2z-eI-RxD" firstAttribute="leading" secondItem="c4W-N8-9zL" secondAttribute="leading" id="Lcu-L9-XWc"/>
+                                                <constraint firstItem="44H-2z-NZL" firstAttribute="top" secondItem="h2z-eI-RxD" secondAttribute="bottom" constant="-20" id="MBV-hl-AI8"/>
+                                                <constraint firstAttribute="trailing" secondItem="h2z-eI-RxD" secondAttribute="trailing" id="vbG-hE-8wJ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="IEe-zz-oKT"/>
+                                                    <exclude reference="MBV-hl-AI8"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="44H-2z-NZL" secondAttribute="bottom" constant="5" id="0Pb-I2-SPG"/>
+                                        </constraints>
                                         <connections>
+                                            <outlet property="backgroundImageView" destination="h2z-eI-RxD" id="CB1-wm-iuF"/>
+                                            <outlet property="clubDetailLabel" destination="44H-2z-NZL" id="jSl-vD-4gf"/>
+                                            <outlet property="clubNameLabel" destination="LcR-3k-aGZ" id="zJc-Ob-uAe"/>
                                             <segue destination="GfL-SW-hU8" kind="show" id="s4c-I2-Il2"/>
                                         </connections>
                                     </tableViewCell>
@@ -43,12 +92,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Tg6-b7-7ig" secondAttribute="trailing" id="D3B-fE-2lz"/>
                             <constraint firstItem="Tg6-b7-7ig" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="mvI-G7-ORh"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tg6-b7-7ig" secondAttribute="bottom" id="tHa-OA-d1w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tg6-b7-7ig" secondAttribute="bottom" constant="-49" id="tHa-OA-d1w"/>
                             <constraint firstItem="Tg6-b7-7ig" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wz8-wX-VsF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E6n-Z2-MBA">
-                        <barButtonItem key="leftBarButtonItem" title="Cities" id="XOw-px-AbH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cities" id="XOw-px-AbH">
+                            <color key="tintColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Tg6-b7-7ig" id="TG7-zo-OW4"/>
