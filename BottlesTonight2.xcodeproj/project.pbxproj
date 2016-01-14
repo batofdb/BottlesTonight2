@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47E8CA741C4738EC00E92DEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA731C4738EC00E92DEA /* main.m */; };
+		47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA761C4738EC00E92DEA /* AppDelegate.m */; };
+		47E8CA7A1C4738EC00E92DEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA791C4738EC00E92DEA /* ViewController.m */; };
+		47E8CA7D1C4738EC00E92DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8CA7B1C4738EC00E92DEA /* Main.storyboard */; };
+		47E8CA801C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA7E1C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld */; };
+		47E8CA821C4738EC00E92DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E8CA811C4738EC00E92DEA /* Assets.xcassets */; };
+		47E8CA851C4738EC00E92DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8CA831C4738EC00E92DEA /* LaunchScreen.storyboard */; };
+		47E8CA901C4738EC00E92DEA /* BottlesTonight2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA8F1C4738EC00E92DEA /* BottlesTonight2Tests.m */; };
+		47E8CA9B1C4738EC00E92DEA /* BottlesTonight2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA9A1C4738EC00E92DEA /* BottlesTonight2UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47E8CA8C1C4738EC00E92DEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E8CA671C4738EB00E92DEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E8CA6E1C4738EB00E92DEA;
+			remoteInfo = BottlesTonight2;
+		};
+		47E8CA971C4738EC00E92DEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E8CA671C4738EB00E92DEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E8CA6E1C4738EB00E92DEA;
+			remoteInfo = BottlesTonight2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47E8CA6F1C4738EB00E92DEA /* BottlesTonight2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottlesTonight2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E8CA731C4738EC00E92DEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47E8CA751C4738EC00E92DEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		47E8CA761C4738EC00E92DEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		47E8CA781C4738EC00E92DEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		47E8CA791C4738EC00E92DEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		47E8CA7C1C4738EC00E92DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47E8CA7F1C4738EC00E92DEA /* BottlesTonight2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BottlesTonight2.xcdatamodel; sourceTree = "<group>"; };
+		47E8CA811C4738EC00E92DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47E8CA841C4738EC00E92DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47E8CA861C4738EC00E92DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E8CA8B1C4738EC00E92DEA /* BottlesTonight2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottlesTonight2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E8CA8F1C4738EC00E92DEA /* BottlesTonight2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottlesTonight2Tests.m; sourceTree = "<group>"; };
+		47E8CA911C4738EC00E92DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E8CA961C4738EC00E92DEA /* BottlesTonight2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottlesTonight2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E8CA9A1C4738EC00E92DEA /* BottlesTonight2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottlesTonight2UITests.m; sourceTree = "<group>"; };
+		47E8CA9C1C4738EC00E92DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47E8CA6C1C4738EB00E92DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E8CA881C4738EC00E92DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E8CA931C4738EC00E92DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47E8CA661C4738EB00E92DEA = {
+			isa = PBXGroup;
+			children = (
+				47E8CA711C4738EB00E92DEA /* BottlesTonight2 */,
+				47E8CA8E1C4738EC00E92DEA /* BottlesTonight2Tests */,
+				47E8CA991C4738EC00E92DEA /* BottlesTonight2UITests */,
+				47E8CA701C4738EB00E92DEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47E8CA701C4738EB00E92DEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47E8CA6F1C4738EB00E92DEA /* BottlesTonight2.app */,
+				47E8CA8B1C4738EC00E92DEA /* BottlesTonight2Tests.xctest */,
+				47E8CA961C4738EC00E92DEA /* BottlesTonight2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47E8CA711C4738EB00E92DEA /* BottlesTonight2 */ = {
+			isa = PBXGroup;
+			children = (
+				47E8CA751C4738EC00E92DEA /* AppDelegate.h */,
+				47E8CA761C4738EC00E92DEA /* AppDelegate.m */,
+				47E8CA781C4738EC00E92DEA /* ViewController.h */,
+				47E8CA791C4738EC00E92DEA /* ViewController.m */,
+				47E8CA7B1C4738EC00E92DEA /* Main.storyboard */,
+				47E8CA811C4738EC00E92DEA /* Assets.xcassets */,
+				47E8CA831C4738EC00E92DEA /* LaunchScreen.storyboard */,
+				47E8CA861C4738EC00E92DEA /* Info.plist */,
+				47E8CA7E1C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld */,
+				47E8CA721C4738EC00E92DEA /* Supporting Files */,
+			);
+			path = BottlesTonight2;
+			sourceTree = "<group>";
+		};
+		47E8CA721C4738EC00E92DEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47E8CA731C4738EC00E92DEA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47E8CA8E1C4738EC00E92DEA /* BottlesTonight2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				47E8CA8F1C4738EC00E92DEA /* BottlesTonight2Tests.m */,
+				47E8CA911C4738EC00E92DEA /* Info.plist */,
+			);
+			path = BottlesTonight2Tests;
+			sourceTree = "<group>";
+		};
+		47E8CA991C4738EC00E92DEA /* BottlesTonight2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				47E8CA9A1C4738EC00E92DEA /* BottlesTonight2UITests.m */,
+				47E8CA9C1C4738EC00E92DEA /* Info.plist */,
+			);
+			path = BottlesTonight2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47E8CA6E1C4738EB00E92DEA /* BottlesTonight2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47E8CA9F1C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2" */;
+			buildPhases = (
+				47E8CA6B1C4738EB00E92DEA /* Sources */,
+				47E8CA6C1C4738EB00E92DEA /* Frameworks */,
+				47E8CA6D1C4738EB00E92DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BottlesTonight2;
+			productName = BottlesTonight2;
+			productReference = 47E8CA6F1C4738EB00E92DEA /* BottlesTonight2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47E8CA8A1C4738EC00E92DEA /* BottlesTonight2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47E8CAA21C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2Tests" */;
+			buildPhases = (
+				47E8CA871C4738EC00E92DEA /* Sources */,
+				47E8CA881C4738EC00E92DEA /* Frameworks */,
+				47E8CA891C4738EC00E92DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47E8CA8D1C4738EC00E92DEA /* PBXTargetDependency */,
+			);
+			name = BottlesTonight2Tests;
+			productName = BottlesTonight2Tests;
+			productReference = 47E8CA8B1C4738EC00E92DEA /* BottlesTonight2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		47E8CA951C4738EC00E92DEA /* BottlesTonight2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47E8CAA51C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2UITests" */;
+			buildPhases = (
+				47E8CA921C4738EC00E92DEA /* Sources */,
+				47E8CA931C4738EC00E92DEA /* Frameworks */,
+				47E8CA941C4738EC00E92DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47E8CA981C4738EC00E92DEA /* PBXTargetDependency */,
+			);
+			name = BottlesTonight2UITests;
+			productName = BottlesTonight2UITests;
+			productReference = 47E8CA961C4738EC00E92DEA /* BottlesTonight2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47E8CA671C4738EB00E92DEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = FrancisBato;
+				TargetAttributes = {
+					47E8CA6E1C4738EB00E92DEA = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					47E8CA8A1C4738EC00E92DEA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 47E8CA6E1C4738EB00E92DEA;
+					};
+					47E8CA951C4738EC00E92DEA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 47E8CA6E1C4738EB00E92DEA;
+					};
+				};
+			};
+			buildConfigurationList = 47E8CA6A1C4738EB00E92DEA /* Build configuration list for PBXProject "BottlesTonight2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47E8CA661C4738EB00E92DEA;
+			productRefGroup = 47E8CA701C4738EB00E92DEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47E8CA6E1C4738EB00E92DEA /* BottlesTonight2 */,
+				47E8CA8A1C4738EC00E92DEA /* BottlesTonight2Tests */,
+				47E8CA951C4738EC00E92DEA /* BottlesTonight2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47E8CA6D1C4738EB00E92DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E8CA851C4738EC00E92DEA /* LaunchScreen.storyboard in Resources */,
+				47E8CA821C4738EC00E92DEA /* Assets.xcassets in Resources */,
+				47E8CA7D1C4738EC00E92DEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E8CA891C4738EC00E92DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E8CA941C4738EC00E92DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47E8CA6B1C4738EB00E92DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E8CA801C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld in Sources */,
+				47E8CA7A1C4738EC00E92DEA /* ViewController.m in Sources */,
+				47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */,
+				47E8CA741C4738EC00E92DEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E8CA871C4738EC00E92DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E8CA901C4738EC00E92DEA /* BottlesTonight2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E8CA921C4738EC00E92DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E8CA9B1C4738EC00E92DEA /* BottlesTonight2UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47E8CA8D1C4738EC00E92DEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E8CA6E1C4738EB00E92DEA /* BottlesTonight2 */;
+			targetProxy = 47E8CA8C1C4738EC00E92DEA /* PBXContainerItemProxy */;
+		};
+		47E8CA981C4738EC00E92DEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E8CA6E1C4738EB00E92DEA /* BottlesTonight2 */;
+			targetProxy = 47E8CA971C4738EC00E92DEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47E8CA7B1C4738EC00E92DEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47E8CA7C1C4738EC00E92DEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47E8CA831C4738EC00E92DEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47E8CA841C4738EC00E92DEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47E8CA9D1C4738EC00E92DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47E8CA9E1C4738EC00E92DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47E8CAA01C4738EC00E92DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BottlesTonight2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisBato.BottlesTonight2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		47E8CAA11C4738EC00E92DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BottlesTonight2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisBato.BottlesTonight2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		47E8CAA31C4738EC00E92DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BottlesTonight2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisBato.BottlesTonight2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BottlesTonight2.app/BottlesTonight2";
+			};
+			name = Debug;
+		};
+		47E8CAA41C4738EC00E92DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BottlesTonight2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisBato.BottlesTonight2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BottlesTonight2.app/BottlesTonight2";
+			};
+			name = Release;
+		};
+		47E8CAA61C4738EC00E92DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BottlesTonight2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisBato.BottlesTonight2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BottlesTonight2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		47E8CAA71C4738EC00E92DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BottlesTonight2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisBato.BottlesTonight2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BottlesTonight2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47E8CA6A1C4738EB00E92DEA /* Build configuration list for PBXProject "BottlesTonight2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E8CA9D1C4738EC00E92DEA /* Debug */,
+				47E8CA9E1C4738EC00E92DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47E8CA9F1C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E8CAA01C4738EC00E92DEA /* Debug */,
+				47E8CAA11C4738EC00E92DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47E8CAA21C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E8CAA31C4738EC00E92DEA /* Debug */,
+				47E8CAA41C4738EC00E92DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47E8CAA51C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E8CAA61C4738EC00E92DEA /* Debug */,
+				47E8CAA71C4738EC00E92DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47E8CA7E1C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47E8CA7F1C4738EC00E92DEA /* BottlesTonight2.xcdatamodel */,
+			);
+			currentVersion = 47E8CA7F1C4738EC00E92DEA /* BottlesTonight2.xcdatamodel */;
+			path = BottlesTonight2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 47E8CA671C4738EB00E92DEA /* Project object */;
+}
