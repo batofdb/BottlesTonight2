@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47BBB4791C473AEC00738EC4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB4781C473AEC00738EC4 /* HomeViewController.m */; };
+		47BBB47C1C473AF300738EC4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB47B1C473AF300738EC4 /* DetailViewController.m */; };
 		47E8CA741C4738EC00E92DEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA731C4738EC00E92DEA /* main.m */; };
 		47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA761C4738EC00E92DEA /* AppDelegate.m */; };
-		47E8CA7A1C4738EC00E92DEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA791C4738EC00E92DEA /* ViewController.m */; };
 		47E8CA7D1C4738EC00E92DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8CA7B1C4738EC00E92DEA /* Main.storyboard */; };
 		47E8CA801C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47E8CA7E1C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld */; };
 		47E8CA821C4738EC00E92DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E8CA811C4738EC00E92DEA /* Assets.xcassets */; };
@@ -36,12 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47BBB4771C473AEC00738EC4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		47BBB4781C473AEC00738EC4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		47BBB47A1C473AF300738EC4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		47BBB47B1C473AF300738EC4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		47E8CA6F1C4738EB00E92DEA /* BottlesTonight2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottlesTonight2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E8CA731C4738EC00E92DEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		47E8CA751C4738EC00E92DEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		47E8CA761C4738EC00E92DEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		47E8CA781C4738EC00E92DEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		47E8CA791C4738EC00E92DEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		47E8CA7C1C4738EC00E92DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47E8CA7F1C4738EC00E92DEA /* BottlesTonight2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BottlesTonight2.xcdatamodel; sourceTree = "<group>"; };
 		47E8CA811C4738EC00E92DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +83,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47BBB4741C473A9100738EC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47BBB4771C473AEC00738EC4 /* HomeViewController.h */,
+				47BBB4781C473AEC00738EC4 /* HomeViewController.m */,
+				47BBB47A1C473AF300738EC4 /* DetailViewController.h */,
+				47BBB47B1C473AF300738EC4 /* DetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		47BBB4751C473A9400738EC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47E8CA7B1C4738EC00E92DEA /* Main.storyboard */,
+				47E8CA831C4738EC00E92DEA /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		47BBB4761C473A9700738EC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		47E8CA661C4738EB00E92DEA = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +133,12 @@
 		47E8CA711C4738EB00E92DEA /* BottlesTonight2 */ = {
 			isa = PBXGroup;
 			children = (
+				47BBB4761C473A9700738EC4 /* Model */,
+				47BBB4751C473A9400738EC4 /* View */,
+				47BBB4741C473A9100738EC4 /* Controller */,
 				47E8CA751C4738EC00E92DEA /* AppDelegate.h */,
 				47E8CA761C4738EC00E92DEA /* AppDelegate.m */,
-				47E8CA781C4738EC00E92DEA /* ViewController.h */,
-				47E8CA791C4738EC00E92DEA /* ViewController.m */,
-				47E8CA7B1C4738EC00E92DEA /* Main.storyboard */,
 				47E8CA811C4738EC00E92DEA /* Assets.xcassets */,
-				47E8CA831C4738EC00E92DEA /* LaunchScreen.storyboard */,
 				47E8CA861C4738EC00E92DEA /* Info.plist */,
 				47E8CA7E1C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld */,
 				47E8CA721C4738EC00E92DEA /* Supporting Files */,
@@ -273,10 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BBB47C1C473AF300738EC4 /* DetailViewController.m in Sources */,
 				47E8CA801C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld in Sources */,
-				47E8CA7A1C4738EC00E92DEA /* ViewController.m in Sources */,
 				47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */,
 				47E8CA741C4738EC00E92DEA /* main.m in Sources */,
+				47BBB4791C473AEC00738EC4 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +530,7 @@
 				47E8CAA11C4738EC00E92DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47E8CAA21C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2Tests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +539,7 @@
 				47E8CAA41C4738EC00E92DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47E8CAA51C4738EC00E92DEA /* Build configuration list for PBXNativeTarget "BottlesTonight2UITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +548,7 @@
 				47E8CAA71C4738EC00E92DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
