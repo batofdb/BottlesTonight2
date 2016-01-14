@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tg6-b7-7ig">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="240" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tg6-b7-7ig">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -26,10 +26,10 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OtU-5v-MWA" id="c4W-N8-9zL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="239"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-eI-RxD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-eI-RxD">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="239"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Detail - City - 1.0 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44H-2z-NZL">
@@ -42,7 +42,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcR-3k-aGZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcR-3k-aGZ">
                                                     <rect key="frame" x="13" y="185" width="549" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="549" id="KBd-ox-oUZ"/>
@@ -78,7 +78,7 @@
                                             <outlet property="backgroundImageView" destination="h2z-eI-RxD" id="CB1-wm-iuF"/>
                                             <outlet property="clubDetailLabel" destination="44H-2z-NZL" id="jSl-vD-4gf"/>
                                             <outlet property="clubNameLabel" destination="LcR-3k-aGZ" id="zJc-Ob-uAe"/>
-                                            <segue destination="GfL-SW-hU8" kind="show" id="s4c-I2-Il2"/>
+                                            <segue destination="GfL-SW-hU8" kind="show" identifier="DetailSegue" id="s4c-I2-Il2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -120,12 +120,37 @@
                     <view key="view" contentMode="scaleToFill" id="ihS-8u-mmz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="idQ-Ud-hBa">
+                                <rect key="frame" x="54" y="92" width="483" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="483" id="6Us-Tt-DtA"/>
+                                    <constraint firstAttribute="height" constant="313" id="aGj-MQ-qRX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Us-Tt-DtA"/>
+                                        <exclude reference="aGj-MQ-qRX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="idQ-Ud-hBa" firstAttribute="leading" secondItem="ihS-8u-mmz" secondAttribute="leadingMargin" constant="34" id="FDF-GU-oj5"/>
+                            <constraint firstItem="0fP-iN-gMD" firstAttribute="top" secondItem="idQ-Ud-hBa" secondAttribute="bottom" constant="146" id="MuK-af-DBD"/>
+                            <constraint firstItem="idQ-Ud-hBa" firstAttribute="top" secondItem="uNH-tf-B00" secondAttribute="bottom" constant="28" id="MuU-qC-Sge"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="idQ-Ud-hBa" secondAttribute="trailing" constant="43" id="hBM-d1-V9p"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageTest" destination="idQ-Ud-hBa" id="uQ2-UM-bgz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGv-ti-hdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3368" y="363"/>
+            <point key="canvasLocation" x="3490" y="363"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OJY-Lw-Wbe">

@@ -16,6 +16,7 @@
     if (self) {
         self.imageURLString = dictionary[@"image_url"];
         self.photoName = dictionary[@"name"];
+        self.imageView = [UIImageView new];
 
         if (![dictionary[@"camera"] isEqual:[NSNull null]]) {
             self.camera = dictionary[@"camera"];

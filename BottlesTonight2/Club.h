@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import <UIKit/UIKit.h>
 
 @interface Club : NSObject
 
@@ -19,6 +20,7 @@
 @property (nonatomic) double longitude;
 @property (nonatomic) double latitude;
 @property (nonatomic) User *user;
+@property (nonatomic) UIImageView *imageView;
 
 + (NSArray *)retrieveTransactionsWithResponse:(NSDictionary *)response;
 

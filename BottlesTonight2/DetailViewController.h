@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Club;
+
 @interface DetailViewController : UIViewController
+
+
+@property (nonatomic) Club *club;
 
 @end
