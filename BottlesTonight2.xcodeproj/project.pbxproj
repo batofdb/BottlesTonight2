@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		476C0EDA1C474FEC0025535C /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0ED91C474FEC0025535C /* Club.m */; };
 		476C0EDD1C4750A10025535C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0EDC1C4750A10025535C /* User.m */; };
+		476C0EE01C4824F00025535C /* DetailBGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0EDF1C4824F00025535C /* DetailBGViewController.m */; };
+		476C75481C48B36300850B4B /* ScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C75471C48B36300850B4B /* ScrollContentViewController.m */; };
 		47BBB4791C473AEC00738EC4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB4781C473AEC00738EC4 /* HomeViewController.m */; };
 		47BBB47C1C473AF300738EC4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB47B1C473AF300738EC4 /* DetailViewController.m */; };
 		47BBB47F1C473F9500738EC4 /* ClubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBB47E1C473F9500738EC4 /* ClubTableViewCell.m */; };
@@ -45,6 +47,10 @@
 		476C0ED91C474FEC0025535C /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
 		476C0EDB1C4750A10025535C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		476C0EDC1C4750A10025535C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		476C0EDE1C4824F00025535C /* DetailBGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBGViewController.h; sourceTree = "<group>"; };
+		476C0EDF1C4824F00025535C /* DetailBGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBGViewController.m; sourceTree = "<group>"; };
+		476C75461C48B36300850B4B /* ScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollContentViewController.h; sourceTree = "<group>"; };
+		476C75471C48B36300850B4B /* ScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollContentViewController.m; sourceTree = "<group>"; };
 		47BBB4771C473AEC00738EC4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		47BBB4781C473AEC00738EC4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		47BBB47A1C473AF300738EC4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -115,6 +121,10 @@
 				47BBB47B1C473AF300738EC4 /* DetailViewController.m */,
 				47BBB47D1C473F9500738EC4 /* ClubTableViewCell.h */,
 				47BBB47E1C473F9500738EC4 /* ClubTableViewCell.m */,
+				476C0EDE1C4824F00025535C /* DetailBGViewController.h */,
+				476C0EDF1C4824F00025535C /* DetailBGViewController.m */,
+				476C75461C48B36300850B4B /* ScrollContentViewController.h */,
+				476C75471C48B36300850B4B /* ScrollContentViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -395,11 +405,13 @@
 				47BBB47C1C473AF300738EC4 /* DetailViewController.m in Sources */,
 				476C0EDD1C4750A10025535C /* User.m in Sources */,
 				47E8CA801C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld in Sources */,
+				476C0EE01C4824F00025535C /* DetailBGViewController.m in Sources */,
 				476C0EDA1C474FEC0025535C /* Club.m in Sources */,
 				47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */,
 				47E8CA741C4738EC00E92DEA /* main.m in Sources */,
 				47BBB4791C473AEC00738EC4 /* HomeViewController.m in Sources */,
 				47BBB47F1C473F9500738EC4 /* ClubTableViewCell.m in Sources */,
+				476C75481C48B36300850B4B /* ScrollContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

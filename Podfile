@@ -5,6 +5,7 @@
 
 
 pod 'AFNetworking', '~> 3.0'
+pod 'FXBlurView', '~> 1.6'
 
 target 'BottlesTonight2' do
 

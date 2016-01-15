@@ -42,9 +42,6 @@
     ClubTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     Club *club = self.clubs[indexPath.row];
 
-    //cell.backgroundImageView.image = [UIImage imageNamed:@"party.jpg"];
-
-
     cell.textLabel.backgroundColor = [UIColor clearColor];
 
     // Would use SDWebImage for async download and cache if other cocoapods were allowed
@@ -103,8 +100,6 @@
         DetailViewController *vc = segue.destinationViewController;
         vc.club = self.clubs[indexPath.row];
     }
-
-
 }
 
 
@@ -113,7 +108,7 @@
 
 - (void)getAPIData {
     NSString *consumerKey = @"ysRYFftaURMrjlpsYw0VFQhTQNrReJLBNMItfu4o";
-    NSString *baseURLString = @"https://api.500px.com/v1/photos?feature=popular";
+    NSString *baseURLString = @"https://api.500px.com/v1/photos?feature=editors";
 
     NSDictionary *parameters = @{@"image_size": @"3",
                                  @"consumer_key": consumerKey};

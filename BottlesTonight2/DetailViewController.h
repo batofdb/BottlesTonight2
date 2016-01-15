@@ -12,7 +12,6 @@
 
 @interface DetailViewController : UIViewController
 
-
 @property (nonatomic) Club *club;
 
 @end
