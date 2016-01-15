@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4765FE6A1C48DC1000B95F30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4765FE691C48DC1000B95F30 /* MapKit.framework */; };
+		4765FE6D1C495D8500B95F30 /* DetailUIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4765FE6C1C495D8500B95F30 /* DetailUIScrollView.m */; };
 		476C0EDA1C474FEC0025535C /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0ED91C474FEC0025535C /* Club.m */; };
 		476C0EDD1C4750A10025535C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0EDC1C4750A10025535C /* User.m */; };
 		476C0EE01C4824F00025535C /* DetailBGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0EDF1C4824F00025535C /* DetailBGViewController.m */; };
@@ -45,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		4765FE691C48DC1000B95F30 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4765FE6B1C495D8500B95F30 /* DetailUIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailUIScrollView.h; sourceTree = "<group>"; };
+		4765FE6C1C495D8500B95F30 /* DetailUIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUIScrollView.m; sourceTree = "<group>"; };
 		476C0ED81C474FEC0025535C /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
 		476C0ED91C474FEC0025535C /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
 		476C0EDB1C4750A10025535C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				476C0EDF1C4824F00025535C /* DetailBGViewController.m */,
 				476C75461C48B36300850B4B /* ScrollContentViewController.h */,
 				476C75471C48B36300850B4B /* ScrollContentViewController.m */,
+				4765FE6B1C495D8500B95F30 /* DetailUIScrollView.h */,
+				4765FE6C1C495D8500B95F30 /* DetailUIScrollView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 				47E8CA801C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld in Sources */,
 				476C0EE01C4824F00025535C /* DetailBGViewController.m in Sources */,
 				476C0EDA1C474FEC0025535C /* Club.m in Sources */,
+				4765FE6D1C495D8500B95F30 /* DetailUIScrollView.m in Sources */,
 				47E8CA771C4738EC00E92DEA /* AppDelegate.m in Sources */,
 				47E8CA741C4738EC00E92DEA /* main.m in Sources */,
 				47BBB4791C473AEC00738EC4 /* HomeViewController.m in Sources */,

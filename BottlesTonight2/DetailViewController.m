@@ -11,13 +11,14 @@
 #import "User.h"
 #import "Club.h"
 #import "ScrollContentViewController.h"
+#import "DetailUIScrollView.h"
 
 @interface DetailViewController () <UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (nonatomic) NSArray *pageTitles;
 @property (weak, nonatomic) IBOutlet UIView *bgContentView;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet DetailUIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *scrollContentView;
 
 
