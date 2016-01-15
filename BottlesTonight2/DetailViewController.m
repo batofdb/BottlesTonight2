@@ -17,8 +17,12 @@
 @interface DetailViewController () <UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+
+// Backgorund view outlets
 @property (nonatomic) NSArray *pageTitles;
 @property (weak, nonatomic) IBOutlet UIView *bgContentView;
+
+// Scroll view outlets
 @property (weak, nonatomic) IBOutlet DetailUIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *scrollContentView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topScrollContentConstraintOffset;
