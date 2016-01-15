@@ -185,11 +185,6 @@
 				47BBB4761C473A9700738EC4 /* Model */,
 				47BBB4751C473A9400738EC4 /* View */,
 				47BBB4741C473A9100738EC4 /* Controller */,
-				47E8CA751C4738EC00E92DEA /* AppDelegate.h */,
-				47E8CA761C4738EC00E92DEA /* AppDelegate.m */,
-				47E8CA811C4738EC00E92DEA /* Assets.xcassets */,
-				47E8CA861C4738EC00E92DEA /* Info.plist */,
-				47E8CA7E1C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld */,
 				47E8CA721C4738EC00E92DEA /* Supporting Files */,
 			);
 			path = BottlesTonight2;
@@ -198,6 +193,11 @@
 		47E8CA721C4738EC00E92DEA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47E8CA861C4738EC00E92DEA /* Info.plist */,
+				47E8CA7E1C4738EC00E92DEA /* BottlesTonight2.xcdatamodeld */,
+				47E8CA751C4738EC00E92DEA /* AppDelegate.h */,
+				47E8CA761C4738EC00E92DEA /* AppDelegate.m */,
+				47E8CA811C4738EC00E92DEA /* Assets.xcassets */,
 				47E8CA731C4738EC00E92DEA /* main.m */,
 			);
 			name = "Supporting Files";

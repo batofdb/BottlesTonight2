@@ -10,4 +10,6 @@
 
 @interface DetailUIScrollView : UIScrollView
 
+@property (nonatomic) double topOffset;
+
 @end

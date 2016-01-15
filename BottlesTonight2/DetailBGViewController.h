@@ -11,6 +11,7 @@
 @class Club;
 
 @interface DetailBGViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property NSUInteger pageIndex;
 @property (nonatomic) Club *club;

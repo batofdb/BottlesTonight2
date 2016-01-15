@@ -13,6 +13,4 @@
 
 @property (nonatomic) NSArray *clubs;
 
-
-
 @end

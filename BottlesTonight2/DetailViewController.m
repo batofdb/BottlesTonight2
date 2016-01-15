@@ -13,6 +13,7 @@
 #import "ScrollContentViewController.h"
 #import "DetailUIScrollView.h"
 
+
 @interface DetailViewController () <UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
@@ -20,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIView *bgContentView;
 @property (weak, nonatomic) IBOutlet DetailUIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *scrollContentView;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topScrollContentConstraintOffset;
 
 @end
 
@@ -31,23 +32,28 @@
 
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
+    // Setup pagevc
     self.pageTitles = @[@"Page1", @"Page2", @"Page3"];
-
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailBGPageViewController"];
     self.pageViewController.dataSource = self;
-
     self.pageViewController.view.backgroundColor = [UIColor clearColor];
-    //Constrain frame to background
-    self.pageViewController.view.frame = CGRectMake(0, 0, self.bgContentView.frame.size.width, self.bgContentView.frame.size.height);
 
+    // Constrain frame to background
+    self.pageViewController.view.frame = CGRectMake(0, 0, self.bgContentView.frame.size.width, self.bgContentView.frame.size.height);
     [self addChildViewController:self.pageViewController];
     [self.bgContentView addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
+
+    // Calculate offset based on superview frame
+    double topOffset = self.view.frame.size.height*.75;
+    self.scrollView.topOffset = topOffset;
+    self.topScrollContentConstraintOffset.constant = topOffset;
 }
 
 - (void)viewDidLayoutSubviews {
+
     // Set scrollable area
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1200);
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, (self.scrollContentView.frame.size.height)+(self.view.frame.size.height*.75));
 
 }
 
@@ -57,6 +63,7 @@
     DetailBGViewController *startingVC = (DetailBGViewController *)[self viewControllerAtIndex:0];
     NSArray *viewcontrollers = @[startingVC];
     [self.pageViewController setViewControllers:viewcontrollers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
@@ -72,8 +79,6 @@
     if (index >= [self.pageTitles count]) {
         return nil;
     }
-
-    NSLog(@"%li",index);
     return [self viewControllerAtIndex:index];
 }
 
@@ -83,9 +88,12 @@
         return nil;
     }
 
+    // Simulate 3 background pages
     DetailBGViewController *bgVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailBGViewController"];
     bgVC.club = self.club;
     bgVC.pageIndex = index;
+
+    NSLog(@"height: %lf", bgVC.view.frame.size.height);
 
     return bgVC;
 }
@@ -99,7 +107,7 @@
     }
 
     index--;
-    //NSLog(@"%li",index);
+
     return [self viewControllerAtIndex:index];
 }
 

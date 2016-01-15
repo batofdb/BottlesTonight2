@@ -13,14 +13,23 @@
 #import "UIImageView+AFNetworking.h"
 
 @interface ScrollContentViewController ()
+
+// Labels
 @property (weak, nonatomic) IBOutlet UILabel *clubTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *shutterSpeedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *userProfileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameAndLocationLabel;
+
+// Images
+@property (weak, nonatomic) IBOutlet UIImageView *userProfileImageView;
+
+// Mapview
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+// Contraints
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutGuideOffset;
 
 @end
 
@@ -29,13 +38,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // Setup map annotation
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     annotation.coordinate = CLLocationCoordinate2DMake(self.club.latitude, self.club.longitude);
     annotation.title = [NSString stringWithFormat:@"Rating: %lf",self.club.rating];
     annotation.subtitle = self.club.camera;
 
-    NSLog(@"%lf, %lf",self.club.latitude,self.club.longitude);
-
+    // Setup zoom region
     MKCoordinateRegion region;
     MKCoordinateSpan span;
     span.latitudeDelta = 0.01;
@@ -43,13 +52,14 @@
     region.span = span;
     region.center = annotation.coordinate;
 
+    // Add map notation to mapview
     [self.mapView addAnnotation:annotation];
     [self.mapView setRegion:region animated:TRUE];
     [self.mapView regionThatFits:region];
 
-
     self.view.backgroundColor = [UIColor clearColor];
 
+    // Add blur effect
     UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
     blurEffectView.frame = self.view.bounds;
@@ -58,6 +68,7 @@
     [self.view addSubview:blurEffectView];
     [self.view sendSubviewToBack:blurEffectView];
 
+    // Populate scrollview content labels
     self.clubTitleLabel.text = self.club.photoName;
     self.shutterSpeedLabel.text = [NSString stringWithFormat:@"Shutter Speed | %@",self.club.shutterSpeed];
     self.ratingLabel.text = [NSString stringWithFormat:@"Rating : %lf",self.club.rating];
@@ -72,13 +83,12 @@
     [self getUserProfilePic];
 }
 
-
-
-#pragma mark - Download User Profile Pic
+#pragma mark - DL Profile Picture
 
 -(void)getUserProfilePic {
+
     if (!self.club.user.userpic.image) {
-        
+
         [self.userProfileImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.club.user.userpic_url]] placeholderImage: [UIImage imageNamed:@"party.jpg"] success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
 
             self.userProfileImageView.image = image;
@@ -97,10 +107,5 @@
         self.userProfileImageView.image = self.club.user.userpic.image;
     }
 }
-
-
-
-
-
 
 @end

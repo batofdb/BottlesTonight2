@@ -12,12 +12,12 @@
 #import "Club.h"
 #import "DetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import <DGActivityIndicatorView/DGActivityIndicatorView.h>
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) UIRefreshControl *refreshControl;
-
+@property (nonatomic) DGActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -27,16 +27,17 @@
     [super viewDidLoad];
     self.clubs = [NSArray new];
 
+    // Setup activity indicator
+    self.activityIndicator = [[DGActivityIndicatorView alloc] initWithType:DGActivityIndicatorAnimationTypeDoubleBounce tintColor:[UIColor whiteColor] size:20.0f];
+    self.activityIndicator.frame = CGRectMake(0.0f, 0.0f, 50.0f, 50.0f);
+    [self.view addSubview:self.activityIndicator];
+
+    // Customize nav bar
     self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+
+    // Customize tab bar
     self.tabBarController.tabBar.barTintColor = [UIColor clearColor];
-
-    // Setup refresh control
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(getAPIData) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
-
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -52,7 +53,6 @@
     Club *club = self.clubs[indexPath.row];
 
     cell.textLabel.backgroundColor = [UIColor clearColor];
-
     cell.clubNameLabel.text = club.photoName;
 
     NSString *mappedString = @"No Map";
@@ -62,8 +62,9 @@
 
     cell.clubDetailLabel.text = [NSString stringWithFormat:@"%@ - SS %@ | %@",club.camera, club.shutterSpeed,mappedString];
 
-    // Check if image does not exist, if so async download else use cached image
+    // Check if image does not exist, if so async download
     if (!club.imageView.image) {
+
         //Avoid retain cycle
         __weak ClubTableViewCell *weakCell = cell;
 
@@ -78,6 +79,7 @@
                 // Handle Error
             }];
     } else {
+        // Use image if it exists
         cell.backgroundImageView.image = club.imageView.image;
     }
 
@@ -91,17 +93,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"DetailSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-
         DetailViewController *vc = segue.destinationViewController;
         vc.club = self.clubs[indexPath.row];
     }
 }
 
-
-
 #pragma mark - Networking Layer
 
 - (void)getAPIData {
+
+    [self.activityIndicator startAnimating];
+
     NSString *consumerKey = @"ysRYFftaURMrjlpsYw0VFQhTQNrReJLBNMItfu4o";
     NSString *baseURLString = @"https://api.500px.com/v1/photos?feature=editors";
 
@@ -116,12 +118,13 @@
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
-            [self.refreshControl endRefreshing];
+            [self.activityIndicator stopAnimating];
         });
 
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+
 }
 
 
