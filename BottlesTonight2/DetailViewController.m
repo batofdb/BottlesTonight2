@@ -31,7 +31,7 @@
 
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
-    self.pageTitles = @[@"Welcome", @"Finance Summary", @"Top Tags"];
+    self.pageTitles = @[@"Page1", @"Page2", @"Page3"];
 
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailBGPageViewController"];
     self.pageViewController.dataSource = self;

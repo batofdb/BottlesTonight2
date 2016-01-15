@@ -11,11 +11,12 @@
 #import <AFNetworking/AFNetworking.h>
 #import "Club.h"
 #import "DetailViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic) UIRefreshControl *refreshControl;
 
 
 @end
@@ -25,8 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.clubs = [NSArray new];
+
     self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.tabBarController.tabBar.barTintColor = [UIColor clearColor];
+
+    // Setup refresh control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(getAPIData) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+
 
 }
 
@@ -44,43 +53,6 @@
 
     cell.textLabel.backgroundColor = [UIColor clearColor];
 
-    // Check to see if image is stored in object if not async download
-    if (!club.imageView.image) {
-        NSURLSession *session = [NSURLSession sharedSession];
-        NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:club.imageURLString]
-                                                completionHandler:^(NSData *data, NSURLResponse *response,
-                                                                    NSError *error) {
-                                                    if (!error) {
-
-                                                        UIImage *image = [UIImage imageWithData:data];
-
-                                                        //Store image to object
-                                                        [club.imageView setImage:image];
-
-                                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                                            ClubTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-
-                                                            cell.backgroundImageView.image = club.imageView.image;
-
-                                                            // Refresh cell
-                                                            [cell setNeedsDisplay];
-                                                        });
-
-                                                    } else {
-                                                        //Error Handling
-
-                                                        cell.backgroundImageView.image = [UIImage imageNamed:@"party.jpg"];
-                                                    }
-                                                }];
-
-        [dataTask resume];
-    } else {
-        // If image exists, use it
-        // This allows to reuse image data instead of continuously downloading image everytime
-        // user scrolls
-        cell.backgroundImageView.image = club.imageView.image;
-    }
-
     cell.clubNameLabel.text = club.photoName;
 
     NSString *mappedString = @"No Map";
@@ -89,6 +61,25 @@
         mappedString = @"Mapped";
 
     cell.clubDetailLabel.text = [NSString stringWithFormat:@"%@ - SS %@ | %@",club.camera, club.shutterSpeed,mappedString];
+
+    // Check if image does not exist, if so async download else use cached image
+    if (!club.imageView.image) {
+        //Avoid retain cycle
+        __weak ClubTableViewCell *weakCell = cell;
+
+        [weakCell.backgroundImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:club.imageURLString]] placeholderImage: [UIImage imageNamed:@"party.jpg"] success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+
+            weakCell.backgroundImageView.image = image;
+            club.imageView.image = image;
+
+            [weakCell setNeedsDisplay];
+
+            } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+                // Handle Error
+            }];
+    } else {
+        cell.backgroundImageView.image = club.imageView.image;
+    }
 
     return cell;
 }
@@ -125,6 +116,7 @@
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
         });
 
     } failure:^(NSURLSessionTask *operation, NSError *error) {

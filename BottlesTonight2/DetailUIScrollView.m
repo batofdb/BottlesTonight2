@@ -14,6 +14,8 @@
 {
     NSLog(@"content offset:%lf point:%lf",self.contentOffset.y,point.y);
 
+    // Register any touches that are outside the scroll content view
+    // to the page control view behind it
     if (self.contentOffset.y < 451.0 && point.y < 453.0) {
         return NO;
     } else {

@@ -10,6 +10,7 @@
 #import <FXBlurView.h>
 #import "Club.h"
 #import <MapKit/MapKit.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface ScrollContentViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *clubTitleLabel;
@@ -77,30 +78,18 @@
 
 -(void)getUserProfilePic {
     if (!self.club.user.userpic.image) {
-        NSURLSession *session = [NSURLSession sharedSession];
-        NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:self.club.user.userpic_url]
-                                                completionHandler:^(NSData *data, NSURLResponse *response,
-                                                                    NSError *error) {
-                                                    if (!error) {
-
-                                                        UIImage *image = [UIImage imageWithData:data];
-
-                                                        //Store image to object
-                                                        [self.club.user.userpic setImage:image];
-
-                                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                                            self.userProfileImageView.image = self.club.user.userpic.image;
-                                                            [self.userProfileImageView setNeedsDisplay];
-                                                        });
-
-                                                    } else {
-                                                        //Error Handling
-
-                                                        self.userProfileImageView.image = [UIImage imageNamed:@"party.jpg"];
-                                                    }
-                                                }];
         
-        [dataTask resume];
+        [self.userProfileImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.club.user.userpic_url]] placeholderImage: [UIImage imageNamed:@"party.jpg"] success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+
+            self.userProfileImageView.image = image;
+            self.club.user.userpic.image = image;
+
+            [self.userProfileImageView setNeedsDisplay];
+
+        } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+            // Handle Error
+        }];
+
     } else {
         // If image exists, use it
         // This allows to reuse image data instead of continuously downloading image everytime
