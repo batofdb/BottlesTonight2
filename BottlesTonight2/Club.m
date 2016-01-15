@@ -16,6 +16,13 @@
     if (self) {
         self.imageURLString = dictionary[@"image_url"];
         self.photoName = dictionary[@"name"];
+
+        if (![dictionary[@"description"] isEqual:[NSNull null]]) {
+            self.desc = dictionary[@"description"];
+        } else {
+            self.desc = @"N/A";
+        }
+
         self.imageView = [UIImageView new];
 
         if (![dictionary[@"camera"] isEqual:[NSNull null]]) {
@@ -41,9 +48,17 @@
         user.username = dictionary[@"user"][@"username"];
         user.firstName = dictionary[@"user"][@"firstname"];
         user.lastName = dictionary[@"user"][@"lastname"];
-        user.city = dictionary[@"user"][@"city"];
-        user.country = dictionary[@"user"][@"country"];
+
+        if (![dictionary[@"user"][@"city"] isEqual:[NSNull null]]) {
+            user.city = dictionary[@"user"][@"city"];
+            user.country = dictionary[@"user"][@"country"];
+        } else {
+            user.city = @"Somewhere";
+            user.country = @"Worldwide";
+        }
+
         user.userpic_url = dictionary[@"user"][@"userpic_url"];
+        user.userpic = [UIImageView new];
 
         self.user = user;
     }

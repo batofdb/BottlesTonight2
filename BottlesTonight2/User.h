@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface User : NSObject
 
@@ -16,5 +17,6 @@
 @property (nonatomic) NSString *city;
 @property (nonatomic) NSString *country;
 @property (nonatomic) NSString *userpic_url;
+@property (nonatomic) UIImageView *userpic;
 
 @end

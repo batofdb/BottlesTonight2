@@ -10,6 +10,7 @@
 #import "DetailBGViewController.h"
 #import "User.h"
 #import "Club.h"
+#import "ScrollContentViewController.h"
 
 @interface DetailViewController () <UIPageViewControllerDataSource>
 
@@ -99,6 +100,14 @@
     index--;
     //NSLog(@"%li",index);
     return [self viewControllerAtIndex:index];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ScrollEmbedSegue"]) {
+        ScrollContentViewController *vc = segue.destinationViewController;
+        vc.club = self.club;
+    }
 }
 
 @end

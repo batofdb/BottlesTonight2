@@ -19,6 +19,7 @@
         self.city = dictionary[@"city"];
         self.country = dictionary[@"country"];
         self.userpic_url = dictionary[@"userpic_url"];
+        self.userpic = [UIImageView new];
     }
 
     return self;

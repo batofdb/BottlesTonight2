@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4765FE6A1C48DC1000B95F30 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4765FE691C48DC1000B95F30 /* MapKit.framework */; };
 		476C0EDA1C474FEC0025535C /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0ED91C474FEC0025535C /* Club.m */; };
 		476C0EDD1C4750A10025535C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0EDC1C4750A10025535C /* User.m */; };
 		476C0EE01C4824F00025535C /* DetailBGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476C0EDF1C4824F00025535C /* DetailBGViewController.m */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4765FE691C48DC1000B95F30 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		476C0ED81C474FEC0025535C /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
 		476C0ED91C474FEC0025535C /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
 		476C0EDB1C4750A10025535C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4765FE6A1C48DC1000B95F30 /* MapKit.framework in Frameworks */,
 				D7CCD21E830A8FEF56ABFB99 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +219,7 @@
 		557D881957413184E435DFAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4765FE691C48DC1000B95F30 /* MapKit.framework */,
 				DEAA8A05E97823D61E41F513 /* libPods.a */,
 			);
 			name = Frameworks;

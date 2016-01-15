@@ -44,8 +44,6 @@
 
     cell.textLabel.backgroundColor = [UIColor clearColor];
 
-    // Would use SDWebImage for async download and cache if other cocoapods were allowed
-
     // Check to see if image is stored in object if not async download
     if (!club.imageView.image) {
         NSURLSession *session = [NSURLSession sharedSession];
@@ -84,7 +82,13 @@
     }
 
     cell.clubNameLabel.text = club.photoName;
-    cell.clubDetailLabel.text = [NSString stringWithFormat:@"%@ - SS %@",club.camera, club.shutterSpeed];
+
+    NSString *mappedString = @"No Map";
+
+    if (club.latitude != 0 && club.longitude != 0)
+        mappedString = @"Mapped";
+
+    cell.clubDetailLabel.text = [NSString stringWithFormat:@"%@ - SS %@ | %@",club.camera, club.shutterSpeed,mappedString];
 
     return cell;
 }

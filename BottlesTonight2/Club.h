@@ -21,6 +21,7 @@
 @property (nonatomic) double latitude;
 @property (nonatomic) User *user;
 @property (nonatomic) UIImageView *imageView;
+@property (nonatomic) NSString *desc;
 
 + (NSArray *)retrieveTransactionsWithResponse:(NSDictionary *)response;
 

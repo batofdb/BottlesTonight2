@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Club;
+
 @interface ScrollContentViewController : UIViewController
+
+@property (nonatomic) Club *club;
 
 @end
